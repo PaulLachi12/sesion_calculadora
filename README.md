@@ -110,4 +110,3 @@ npx serve .
 
 - **Cumple con los requisitos de entrega de la guia?**
   Si. Incluye el archivo nombrado `js91.html`, las tres funciones requeridas, el uso de `parseFloat()`, la formula de area, la manipulacion de `textContent` y los estilos CSS sugeridos en las recomendaciones finales.
-# sesion_calculadora

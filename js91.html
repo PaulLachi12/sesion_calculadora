@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica js91 - JavaScript Basico</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="contenedor">
+    <header>
+      <h1>Semana 9: Sesion 1 (js91.html)</h1>
+      <p>JavaScript: tipos, operadores y estructura de un programa</p>
+    </header>
+
+    <form id="formulario-practica" onsubmit="return false;">
+      <section class="seccion">
+        <h2>Datos personales</h2>
+        
+        <div class="fila-formulario">
+          <label for="cnombre">Nombre:</label>
+          <input type="text" id="cnombre" name="cnombre" size="20" placeholder="Escribe tu nombre">
+          <input type="button" value="Comprueba" onclick="muestra(document.getElementById('cnombre'))">
+        </div>
+
+        <div class="campo-bloque">
+          <label for="secre">Contrasena (escribe aqui):</label>
+          <input 
+            type="password" 
+            id="secre" 
+            name="secre" 
+            class="campo-corto" 
+            placeholder="Clave"
+            onkeyup="pasa(this, document.getElementById('caja'))"
+          >
+        </div>
+
+        <div class="campo-bloque">
+          <label for="caja">Normal (reflejo en tiempo real):</label>
+          <input 
+            type="text" 
+            id="caja" 
+            name="caja" 
+            class="campo-corto" 
+            placeholder="Se vera aqui" 
+            readonly
+          >
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2>Calculadora de Area de Triangulo</h2>
+        <p class="descripcion">Ingrese la base y la altura del triangulo para calcular su area:</p>
+
+        <div class="cuadricula-entradas">
+          <div class="campo-bloque">
+            <label for="base">Base:</label>
+            <input type="text" id="base" name="base" placeholder="Ejemplo: 10">
+          </div>
+
+          <div class="campo-bloque">
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" name="altura" placeholder="Ejemplo: 5">
+          </div>
+        </div>
+
+        <button type="button" class="btn-secundario" onclick="calcularArea()">Calcular Area</button>
+
+        <p id="resultado" class="caja-resultado" role="status" aria-live="polite"></p>
+      </section>
+    </form>
+
+    <footer>
+      <p>Laboratorio de Desarrollo Web - Documento js91.html</p>
+    </footer>
+  </main>
+</body>
+</html>
